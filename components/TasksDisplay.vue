@@ -18,12 +18,12 @@ export default {
 .tasks_container {
   width: 100%;
   height: 80%;
-  padding: 2em;
+  padding-top: 3em;
+  padding-left: 2em;
 
-  border: 1px solid;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: initial;
 }
 </style>
