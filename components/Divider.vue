@@ -15,7 +15,7 @@ export default {
 .divider_container {
   width: 100%;
   height: 3%;
-  padding-left: 2em;
+  padding-left: 1.5em;
 
   display: flex;
   flex-direction: row;
@@ -24,14 +24,14 @@ export default {
 }
 
 .divider_container span {
-  color: #5d5d81;
+  color: #00000050;
 }
 
 .divider_container .line_container {
-  width: 90%;
+  width: 75%;
   height: 1px;
   border: 1px solid;
 
-  border-color: #bfcde0;
+  border-color: #00bd9d5e;
 }
 </style>

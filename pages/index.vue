@@ -1,11 +1,8 @@
 <template>
   <div class="container">
-    <main class="main">
-      <Header />
-      <Divider />
-      <TasksDisplay />
-    </main>
-    <aside class="aside"></aside>
+    <Header />
+    <Divider />
+    <TasksDisplay />
   </div>
 </template>
 
@@ -37,31 +34,13 @@ html {
 }
 
 .container {
-  height: 80vh;
-  background-color: #fefcfd;
-  border-radius: 10px;
-  margin-top: 5em;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.container .main {
-  width: 65%;
-  height: 90%;
-  border: 1px solid;
+  width: 375px;
+  height: 812px;
+  background: #fffbfa;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-}
-
-.container .aside {
-  width: 30%;
-  height: 90%;
-  border: 1px solid;
 }
 </style>
