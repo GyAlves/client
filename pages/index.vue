@@ -1,21 +1,12 @@
 <template>
-  <div class="container">
-    <Header />
-    <Divider />
-    <TasksDisplay />
-  </div>
+  <Header />
 </template>
 
 <script>
 import Header from "../components/Header.vue";
-import Divider from "../components/Divider.vue";
-import TasksDisplay from "../components/TasksDisplay.vue";
-
 export default {
   components: {
     Header,
-    Divider,
-    TasksDisplay,
   },
 };
 </script>
@@ -31,16 +22,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-}
-
-.container {
-  width: 375px;
-  height: 812px;
-  background: #fffbfa;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  background-color: #f3eff5;
 }
 </style>

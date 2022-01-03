@@ -1,11 +1,15 @@
 <template>
-  <div class="header_container">
-    <div class="add_task_btn"></div>
-    <div class="header_description">
-      <span
-        >Welcome back, <br />
-        <p>Gyasmin</p></span
-      >
+  <div class="hero_container">
+    <img class="image" src="~assets/images/image-hero-desktop.jpg" />
+    <div class="description_container">
+      <div class="title">Crowd<br />fund.</div>
+      <div class="menu_cont">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Discover</a></li>
+          <li><a href="#">Create a fund</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -16,30 +20,49 @@ export default {
 };
 </script>
 
-<style scoped>
-.header_container {
-  width: 100%;
-  height: 20%;
+<style>
+.hero_container {
+  display: inline-block;
+  position: relative;
 }
 
-.add_task_btn {
-  width: 100%;
-  height: 40%;
+.description_container {
+  position: absolute;
+  width: 90%;
+  top: 40px;
+  right: 70px;
+  font-size: 40px;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
 }
 
-.header_description {
-  width: 100%;
-  height: 60%;
-  padding-left: 1.5em;
+.description_container .title {
+  font-size: 94px;
 }
 
-.header_description span {
-  font-size: 24px;
-  color: #0000004b;
+.description_container .menu_cont {
+  width: 40%;
+  height: 6em;
 }
 
-.header_description p {
-  color: #00bd9d;
+.description_container .menu_cont ul {
+  list-style-type: none;
+}
+
+.description_container .menu_cont ul li a {
+  font-size: 21px;
   font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+.description_container .menu_cont ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 </style>
