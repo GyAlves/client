@@ -4,11 +4,8 @@
     <div class="description_container">
       <div class="title">Crowd<br />fund.</div>
       <div class="menu_cont">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Discover</a></li>
-          <li><a href="#">Create a fund</a></li>
-        </ul>
+        <NuxtLink to="/">Home</NuxtLink>
+        <NuxtLink to="/discover">Discover</NuxtLink>
       </div>
     </div>
   </div>
@@ -48,6 +45,15 @@ export default {
 .description_container .menu_cont {
   width: 40%;
   height: 6em;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-top: 1em;
+  text-decoration: none;
+
+  border: 2px solid;
 }
 
 .description_container .menu_cont ul {
@@ -55,7 +61,7 @@ export default {
 }
 
 .description_container .menu_cont ul li a {
-  font-size: 21px;
+  font-size: 22px;
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
