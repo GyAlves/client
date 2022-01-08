@@ -3,9 +3,9 @@
     <div class="logo_container">Crowd<br />fund.</div>
     <div class="sub_header_menu_container">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Discover</a></li>
-        <li><a href="#">Create a fund</a></li>
+        <li><NuxtLink to="/" class="a">Home</NuxtLink></li>
+        <li><NuxtLink to="/funds" class="a">Discover</NuxtLink></li>
+        <li><NuxtLink to="/fund" class="a">Create a fund</NuxtLink></li>
       </ul>
     </div>
   </div>
@@ -56,7 +56,7 @@ export default {
   justify-content: space-around;
 }
 
-.sub_header_container .sub_header_menu_container ul li a {
+.sub_header_container .sub_header_menu_container ul li .a {
   text-decoration: none;
   font-weight: bold;
   font-size: 22px;

@@ -16,17 +16,21 @@
           <span>Supporters</span>
         </div>
       </div>
-      <div class="support_button">
-        <span>Support this project</span>
-      </div>
+      <NuxtLink :to="`/funds/${card.id}`" id="button">
+        <Button title="Support this project " />
+      </NuxtLink>
     </div>
   </div>
 </template>
 
 <script>
+import Button from "../components/Button.vue";
 export default {
   name: "Card",
   props: ["card"],
+  components: {
+    Button,
+  },
   data() {
     return {
       hover: false,
@@ -36,6 +40,10 @@ export default {
 </script>
 
 <style>
+#button {
+  text-decoration: none;
+}
+
 .card_container {
   width: 375px;
   height: 550px;
@@ -45,6 +53,8 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  text-decoration: none;
 }
 
 .card_container .card_title {
@@ -129,34 +139,5 @@ export default {
   letter-spacing: 0.03em;
 
   color: rgba(243, 239, 245, 0.73);
-}
-
-.card_container .support_button {
-  margin-top: 2.2em;
-
-  width: 295px;
-  height: 44px;
-
-  background: #26c485;
-  border-radius: 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card_container .support_button span {
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 142.69%;
-
-  /* or 29px */
-  letter-spacing: 0.03em;
-
-  color: #ffffff;
-}
-
-.support_button:hover {
-  cursor: pointer;
 }
 </style>

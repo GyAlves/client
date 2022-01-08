@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import SubHeader from "../components/SubHeader.vue";
-import DiscoverDisplay from "../components/DiscoverDisplay.vue";
+import SubHeader from "../../components/SubHeader.vue";
+import DiscoverDisplay from "../../components/DiscoverDisplay.vue";
 
 export default {
   components: {
