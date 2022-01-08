@@ -1,18 +1,21 @@
 <template>
   <div>
-    <Header />
+    <SubHeader />
+    <ImageHero />
     <Home />
   </div>
 </template>
 
 <script>
-import Header from "../components/Header.vue";
+import ImageHero from "../components/ImageHero.vue";
+import SubHeader from "../components/SubHeader.vue";
 import Home from "../components/Home.vue";
 
 export default {
   components: {
-    Header,
+    SubHeader,
     Home,
+    ImageHero,
   },
 };
 </script>

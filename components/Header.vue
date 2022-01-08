@@ -4,8 +4,8 @@
     <div class="description_container">
       <div class="title">Crowd<br />fund.</div>
       <div class="menu_cont">
-        <NuxtLink to="/">Home</NuxtLink>
-        <NuxtLink to="/discover">Discover</NuxtLink>
+        <NuxtLink to="/" class="a">Home</NuxtLink>
+        <NuxtLink to="/funds" class="a">Discover</NuxtLink>
       </div>
     </div>
   </div>
@@ -52,19 +52,22 @@ export default {
   justify-content: space-around;
   padding-top: 1em;
   text-decoration: none;
-
-  border: 2px solid;
 }
 
 .description_container .menu_cont ul {
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.description_container .menu_cont ul li a {
-  font-size: 22px;
-  font-weight: bold;
-  color: #ffffff;
+.description_container .menu_cont ul li .a {
   text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+
+  color: rgba(13, 10, 11, 0.58);
 }
 .description_container .menu_cont ul {
   display: flex;
