@@ -83,7 +83,7 @@ export default {
 }
 
 .info_description_container {
-  width: 40%;
+  width: 45%;
   height: 45em;
 
   margin-top: 2em;

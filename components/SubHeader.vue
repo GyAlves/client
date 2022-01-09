@@ -5,7 +5,7 @@
       <ul>
         <li><NuxtLink to="/" class="a">Home</NuxtLink></li>
         <li><NuxtLink to="/funds" class="a">Discover</NuxtLink></li>
-        <li><NuxtLink to="/fund" class="a">Create a fund</NuxtLink></li>
+        <li><NuxtLink to="/funds/create" class="a">Create a fund</NuxtLink></li>
       </ul>
     </div>
   </div>
