@@ -21,16 +21,21 @@ export default {
 
 <style>
 .home_container {
+  width: 100%;
+  height: 23em;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   margin-top: 3em;
+
+  background: #ffffff;
+  position: absolute;
 }
 .home_container .about_container {
-  width: 1320px;
-  height: 517px;
+  width: 100%;
+  height: 5em;
 
   background: #ffffff;
   border-radius: 10px;
@@ -56,7 +61,7 @@ export default {
 .home_container .about_container .divisor {
   border: 1px solid rgba(13, 10, 11, 0.363);
   width: 1px;
-  height: 26em;
+  height: 20em;
 }
 
 .home_container .about_container .about_description {

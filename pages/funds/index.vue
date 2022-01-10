@@ -1,5 +1,5 @@
 <template>
-  <div class="discover_container">
+  <div>
     <SubHeader />
     <DiscoverDisplay />
   </div>
@@ -29,11 +29,5 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   background-color: #f3eff5;
-}
-.discover_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
 }
 </style>

@@ -12,6 +12,6 @@ export default {
 
 <style>
 .image_container {
-  height: 13em;
+  height: 10em;
 }
 </style>

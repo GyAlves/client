@@ -2,11 +2,12 @@
   <div class="card_container">
     <div class="card_title">
       <p>{{ card.title }}</p>
+      <DeleteFund v-on:click.native="deleteFund" />
     </div>
     <div class="card_description">
       <div class="details">
         <div class="money">
-          <p>R$ {{ card.current_fund }}</p>
+          <p>R$ {{ card.current }}</p>
           <b />
           <span>of {{ card.target }} backed</span>
         </div>
@@ -24,17 +25,26 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
 import Button from "../components/Button.vue";
+import DeleteFund from "../components/DeleteFund.vue";
+
 export default {
   name: "Card",
   props: ["card"],
   components: {
     Button,
+    DeleteFund,
   },
   data() {
-    return {
-      hover: false,
-    };
+    return {};
+  },
+  methods: {
+    ...mapActions(["deleteById"]),
+
+    deleteFund() {
+      this.deleteById(this.card._id);
+    },
   },
 };
 </script>
@@ -45,9 +55,8 @@ export default {
 }
 
 .card_container {
-  width: 375px;
-  height: 550px;
-  margin-top: 7em;
+  width: 30%;
+  height: 70%;
 
   background-color: #ffffff;
   display: flex;
@@ -63,7 +72,9 @@ export default {
   height: 14em;
 
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   padding: 2em;
 }
 
@@ -78,7 +89,7 @@ export default {
 
 .card_container .card_description {
   width: 100%;
-  height: 25em;
+  height: 20em;
 
   background: #454955;
   border-radius: 20px 20px 0px 0px;

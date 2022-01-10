@@ -11,7 +11,7 @@
             Author: <span>{{ fund.author }}</span>
           </p>
           <p>
-            Expires: <span>{{ fund.date }}</span>
+            Expires: <span>{{ fund.expiration }}</span>
           </p>
         </div>
       </div>
@@ -29,7 +29,7 @@
             </li>
             <li>
               <p>
-                Current: <span>{{ fund.current_fund }}</span>
+                Current: <span>{{ fund.current }}</span>
               </p>
             </li>
             <li>

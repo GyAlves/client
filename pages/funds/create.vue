@@ -11,6 +11,15 @@
           filled
           rounded
           dense
+          v-model="title"
+        ></v-text-field>
+        <v-text-field
+          class="input_container"
+          label="Author"
+          filled
+          rounded
+          dense
+          v-model="author"
         ></v-text-field>
         <v-text-field
           class="input_container"
@@ -18,6 +27,7 @@
           filled
           rounded
           dense
+          v-model="expiration"
         ></v-text-field>
         <v-text-field
           class="input_container"
@@ -25,6 +35,7 @@
           filled
           rounded
           dense
+          v-model="target"
         ></v-text-field>
         <v-text-field
           class="input_container"
@@ -32,21 +43,48 @@
           filled
           rounded
           dense
+          v-model="description"
         ></v-text-field>
       </div>
-
-      <Button title="Create" />
+      <Button v-on:click.native="sendFund" title="Create" id="createFundBtn" />
     </div>
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 import SubHeader from "../../components/SubHeader.vue";
 import Button from "../../components/Button.vue";
+
 export default {
+  data() {
+    return {
+      title: "",
+      author: "",
+      expiration: "",
+      target: "",
+      description: "",
+    };
+  },
   components: {
     SubHeader,
     Button,
+  },
+  methods: {
+    ...mapActions(["createFund"]),
+
+    sendFund: function () {
+      const fund = {
+        title: this.title,
+        author: this.author,
+        expiration: this.expiration,
+        target: this.target,
+        description: this.description,
+      };
+
+      this.createFund(fund);
+    },
   },
 };
 </script>
@@ -63,9 +101,8 @@ export default {
 
 .create_fund_form {
   width: 40%;
-  height: 34em;
-  margin-top: 1em;
-  padding: 2em;
+  height: 33em;
+  margin-top: 1.1em;
 
   background: #ffffff;
   border-radius: 20px;
@@ -80,18 +117,22 @@ export default {
   font-weight: bold;
   font-size: 24px;
   line-height: 28px;
+  margin-top: 1em;
 
   color: rgba(13, 10, 11, 0.58);
 }
 
 .create_fund_form .fund_input_container {
   width: 100%;
-  height: 18em;
-  margin-top: 1em;
+  height: 20em;
+  margin-top: 1.5em;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+#createFundBtn {
+  margin-bottom: 1em;
 }
 </style>
