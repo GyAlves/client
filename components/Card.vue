@@ -17,7 +17,11 @@
           <span>Supporters</span>
         </div>
       </div>
-      <NuxtLink :to="`/funds/${card.id}`" id="button">
+      <NuxtLink
+        :to="`/funds/${card._id}`"
+        id="button"
+        v-on:click.native="getFund"
+      >
         <Button title="Support this project " />
       </NuxtLink>
     </div>
@@ -40,10 +44,14 @@ export default {
     return {};
   },
   methods: {
-    ...mapActions(["deleteById"]),
+    ...mapActions(["deleteById", "getFundById"]),
 
     deleteFund() {
       this.deleteById(this.card._id);
+    },
+    getFund() {
+      console.log("CLICKED");
+      this.getFundById(this.card._id);
     },
   },
 };
