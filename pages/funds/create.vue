@@ -101,8 +101,8 @@ export default {
 
 .create_fund_form {
   width: 40%;
-  height: 33em;
-  margin-top: 1.1em;
+  height: 40em;
+  margin-top: 5em;
 
   background: #ffffff;
   border-radius: 20px;

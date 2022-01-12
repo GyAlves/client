@@ -1,18 +1,8 @@
 <template>
   <div class="wrapper">
     <div class="discover_display_container">
-      <Card
-        v-for="cardInfo in allFunds"
-        :key="cardInfo.id"
-        :card="cardInfo"
-        v-bind:pagination.sync="pagination"
-      />
+      <Card v-for="cardInfo in allFunds" :key="cardInfo.id" :card="cardInfo" />
     </div>
-    <v-pagination
-      v-model="pagination.page"
-      :length="pages"
-      circle
-    ></v-pagination>
   </div>
 </template>
 
@@ -26,20 +16,13 @@ export default {
     Card,
   },
   data() {
-    return {
-      pagination: {},
-    };
+    return {};
   },
   methods: {
     ...mapActions(["fetchFunds"]),
   },
   computed: {
     ...mapGetters(["allFunds"]),
-    pages() {
-      return this.pagination.rowsPerPage
-        ? Math.ceil(this.items.length / this.pagination.rowsPerPage)
-        : 0;
-    },
   },
 
   created() {
@@ -56,6 +39,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 10em;
 }
 .discover_display_container {
   width: 100%;

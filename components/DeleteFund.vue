@@ -1,7 +1,7 @@
 <template>
   <img
     src="~assets/images/delete.png"
-    width="20px"
+    width="18px"
     class="delete_fund_container"
   />
 </template>
@@ -14,7 +14,7 @@ export default {
 
 <style>
 .delete_fund_container {
-  width: 9%;
-  height: 40%;
+  width: 8%;
+  height: 30%;
 }
 </style>
